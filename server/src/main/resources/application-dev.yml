@@ -1,0 +1,10 @@
+server:
+  port: 5000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.12:8763/eureka/
+spring:
+  application:
+    name: server
