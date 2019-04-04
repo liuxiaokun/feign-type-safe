@@ -2,6 +2,7 @@ package com.fred.feign.client.controller;
 
 import com.fred.feign.client.feign.ServerFeignService;
 import com.fred.feign.dto.UserDTO;
+import com.fred.feign.vo.ROL;
 import com.fred.feign.vo.ROO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,14 @@ public class TestController {
     @GetMapping("/feign")
     public Object test() {
         ROO<UserDTO> test = serverFeignService.test();
+
+        return test;
+    }
+
+
+    @GetMapping("/feign/list")
+    public Object testList() {
+        ROL<UserDTO> test = serverFeignService.testList();
 
         return test;
     }

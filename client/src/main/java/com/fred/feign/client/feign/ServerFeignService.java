@@ -1,6 +1,7 @@
 package com.fred.feign.client.feign;
 
 import com.fred.feign.dto.UserDTO;
+import com.fred.feign.vo.ROL;
 import com.fred.feign.vo.ROO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,4 +16,8 @@ public interface ServerFeignService {
 
     @GetMapping("test")
     ROO<UserDTO> test();
+
+
+    @GetMapping("test/list")
+    ROL<UserDTO> testList();
 }
